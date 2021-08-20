@@ -1,4 +1,4 @@
-document.querySelector("#generate-names").addEventListener("submit", loadNames);
+document.querySelector('#generateNames').addEventListener('submit', loadNames);
 
 function loadNames(event) {
      event.preventDefault();
@@ -8,10 +8,10 @@ function loadNames(event) {
      const amount = document.getElementById("amount").value;
 
      // make url
-     let url = "http://uninames.com/api/?";
-     if (region !== " ") url += `region = ${region}`;
-     if (gender !== " ") url += `gender = ${gender}`;
-     if (amount !== " ") url += `amount = ${amount}`;
+     let url = "http://uinames.com/api/?";
+     if (region !== " ") url += `region = ${region}&`;
+     if (gender !== " ") url += `gender = ${gender}&`;
+     if (amount !== " ") url += `amount = ${amount}&`;
      console.log(url);
 
      // ajax
@@ -22,7 +22,7 @@ function loadNames(event) {
      xhr.onload = function () {
           if (this.status === 200) {
                const names = JSON.parse(this.responseText);
-               //    console.log(names);
+                  console.log(names);
 
                // insert into html
                let html = "<h2>Generated Names: </h2>";
