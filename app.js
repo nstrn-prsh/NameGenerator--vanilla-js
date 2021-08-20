@@ -9,10 +9,10 @@ function loadNames(event) {
 
      // make url
      let url = "http://uinames.com/api/?";
-     if (region !== " ") url += `region = ${region}&`;
-     if (gender !== " ") url += `gender = ${gender}&`;
-     if (amount !== " ") url += `amount = ${amount}&`;
-     console.log(url);
+     if (region !== "") url += `region = ${region}&`;
+     if (gender !== "") url += `gender = ${gender}&`;
+     if (amount !== "") url += `amount = ${amount}&`;
+     // console.log(url);
 
      // ajax
      const xhr = new XMLHttpRequest();
